@@ -4,5 +4,5 @@ CREATE TABLE [dbo].[User]
     [Name] NVARCHAR(50) NOT NULL, 
     [PasswordHash] VARBINARY(MAX) NOT NULL, 
     [PasswordSalt] VARBINARY(MAX) NOT NULL, 
-    [Admin] NVARCHAR(50) NOT NULL
+    [Rights] NVARCHAR(50) NOT NULL
 )
