@@ -99,6 +99,7 @@
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "přihlásit";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FormLogin
             // 

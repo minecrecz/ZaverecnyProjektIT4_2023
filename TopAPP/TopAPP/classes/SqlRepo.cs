@@ -37,6 +37,30 @@ namespace TopAPP
             }
             return users;
         }
-
+        public User? GetUser(string username)
+        {
+            User? user = null;
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand cmd = sqlConnection.CreateCommand())
+                {
+                    cmd.CommandText = "select * from Users where Name=@Name";
+                    cmd.Parameters.AddWithValue("Name", username);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            user = new User(reader["Name"].ToString()
+                                , (byte[])reader["PasswordHash"]
+                                , (byte[])reader["PasswordSalt"]
+                                , (string)reader["IsAdmin"]);
+                        }
+                    }
+                }
+                sqlConnection.Close();
+            }
+            return user;
+        }
     }
 }
