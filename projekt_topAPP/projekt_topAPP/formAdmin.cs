@@ -15,23 +15,27 @@ namespace projekt_topAPP
 
     {
 
-        sql_repository Sql_repository;
-        private Employee employee;
+        sql_repository Sql_repo;
+       
 
 
         public formAdmin()
         {
             InitializeComponent();
-            Sql_repository = new sql_repository();
+            Sql_repo = new sql_repository();
         }
 
         private void formAdmin_Load(object sender, EventArgs e)
         {
+            GetEmployees();
+        }
+        private void GetEmployees() 
+        {
             listViewEmployee.Items.Clear();
-            var employees = Sql_repository.GetEmployees();
-            foreach (var row in employees)
+            var employees = Sql_repo.GetEmployees();
+            foreach (var employee in Sql_repo.GetEmployees())
             {
-                listViewEmployee.Items.Add(new ListViewItem(new string[] { employee.ForeName, employee.FirstName, Convert.ToString(employee.PersonalID), }));
+                listViewEmployee.Items.Add(employee.ToListViewEmployee());
             }
         }
 

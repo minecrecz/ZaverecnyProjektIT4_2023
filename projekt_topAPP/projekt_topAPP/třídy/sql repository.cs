@@ -8,10 +8,10 @@ using projekt_topAPP.třídy;
 
 namespace projekt_topAPP
 {
-    public class sql_repository
+    internal class sql_repository
     {
-        
-        private string connectionString = @"Data Source=vps.jhlavacek.cz;Initial Catalog=Dvorak;User ID=DvorakAdam;Password=********;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+
+        private string connectionString = @"Data Source=vps.jhlavacek.cz;Initial Catalog=Dvorak;User ID=DvorakAdam;Password=********;Connect Timeout=30;Encrypt=False;";
         /*
         private List<User> GetUsers()
         {
@@ -103,7 +103,7 @@ namespace projekt_topAPP
             }
         }
         */
-         public List<Employee> GetEmployees()
+        public List<Employee> GetEmployees()
         {
             
             List<Employee> employees = new List<Employee>();
@@ -129,7 +129,20 @@ namespace projekt_topAPP
             }
             return employees;
         }
-        
-           
+        public void DeleteEmployee(string id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = $"delete from Employee where PersonalID={id}";
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+        }
+
+
     }
 }

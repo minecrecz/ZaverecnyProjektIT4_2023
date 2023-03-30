@@ -26,6 +26,10 @@ namespace projekt_topAPP.třídy
         public string Email { get; set; } 
         public string Phone { get; set; } 
 
+        public ListViewItem ToListViewEmployee()
+        {
+           return new ListViewItem(new string[] {PersonalID.ToString(), FirstName, ForeName, Phone,Email,BirthDate});
+        }
         
     }
 }
