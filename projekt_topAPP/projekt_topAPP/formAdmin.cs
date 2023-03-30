@@ -16,7 +16,7 @@ namespace projekt_topAPP
     {
 
         sql_repository Sql_repo;
-       
+
 
 
         public formAdmin()
@@ -29,7 +29,7 @@ namespace projekt_topAPP
         {
             GetEmployees();
         }
-        private void GetEmployees() 
+        private void GetEmployees()
         {
             listViewEmployee.Items.Clear();
             var employees = Sql_repo.GetEmployees();

@@ -120,7 +120,7 @@ namespace projekt_topAPP
                         while (reader.Read())
                         {
 
-                            employees.Add(new Employee(Convert.ToInt32(reader["PersonalID"]), reader["FirstName"].ToString(), reader["Forename"].ToString(), reader["Email"].ToString(), reader["Phone"].ToString(), reader["BirthDay"].ToString()));
+                            employees.Add(new Employee(Convert.ToInt32(reader["PersonalID"]), reader["FirstName"].ToString(), reader["Forename"].ToString(),reader["BirthDay"].ToString(), reader["Email"].ToString(), reader["Phone"].ToString() ));
 
                         }
                     }

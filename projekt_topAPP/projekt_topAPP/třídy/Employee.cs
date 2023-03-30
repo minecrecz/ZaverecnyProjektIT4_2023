@@ -28,7 +28,7 @@ namespace projekt_topAPP.třídy
 
         public ListViewItem ToListViewEmployee()
         {
-           return new ListViewItem(new string[] {PersonalID.ToString(), FirstName, ForeName, Phone,Email,BirthDate});
+           return new ListViewItem(new string[] {PersonalID.ToString(), FirstName, ForeName,BirthDate ,Email,Phone,});
         }
         
     }

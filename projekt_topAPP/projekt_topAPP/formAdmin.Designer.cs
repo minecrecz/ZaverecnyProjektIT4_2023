@@ -40,10 +40,11 @@
             // listViewEmployee
             // 
             listViewEmployee.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
+            listViewEmployee.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             listViewEmployee.GridLines = true;
             listViewEmployee.Location = new Point(12, 586);
             listViewEmployee.Name = "listViewEmployee";
-            listViewEmployee.Size = new Size(374, 379);
+            listViewEmployee.Size = new Size(499, 379);
             listViewEmployee.TabIndex = 0;
             listViewEmployee.UseCompatibleStateImageBehavior = false;
             listViewEmployee.View = View.Details;
@@ -69,10 +70,12 @@
             // columnHeader5
             // 
             columnHeader5.Text = "Email";
+            columnHeader5.Width = 150;
             // 
             // columnHeader6
             // 
             columnHeader6.Text = "Telefoní číslo";
+            columnHeader6.Width = 100;
             // 
             // formAdmin
             // 
