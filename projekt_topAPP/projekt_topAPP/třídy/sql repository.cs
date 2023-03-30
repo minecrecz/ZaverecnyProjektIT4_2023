@@ -10,8 +10,8 @@ namespace projekt_topAPP
 {
     internal class sql_repository
     {
-
-        private string connectionString = @"Data Source=vps.jhlavacek.cz;Initial Catalog=Dvorak;User ID=DvorakAdam;Password=********;Connect Timeout=30;Encrypt=False;";
+        
+        private string connectionString = @"Data Source=vps.jhlavacek.cz;Initial Catalog=Dvorak;User ID=DvorakAdam;Password=Dv0r@k@d@m;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         /*
         private List<User> GetUsers()
         {
@@ -103,7 +103,7 @@ namespace projekt_topAPP
             }
         }
         */
-        public List<Employee> GetEmployees()
+         public List<Employee> GetEmployees()
         {
             
             List<Employee> employees = new List<Employee>();
