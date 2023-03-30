@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace projekt_topAPP
 {
@@ -39,5 +40,20 @@ namespace projekt_topAPP
             }
         }
 
+        private void btnEmployeeDelete_Click(object sender, EventArgs e)
+        {
+
+            if (listViewEmployee.SelectedIndices.Count > 0)
+            {
+                var id = listViewEmployee.Items[listViewEmployee.SelectedIndices[0]].SubItems[0].Text;
+                Sql_repo.DeleteEmployee(id);
+                GetEmployees();
+            }
+            else
+            {
+                MessageBox.Show("Vyber položku");
+            }
+
+        }
     }
 }

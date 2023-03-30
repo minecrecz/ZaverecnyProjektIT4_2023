@@ -35,12 +35,14 @@
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
+            btnEmployeeDelete = new Button();
             SuspendLayout();
             // 
             // listViewEmployee
             // 
             listViewEmployee.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
             listViewEmployee.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            listViewEmployee.FullRowSelect = true;
             listViewEmployee.GridLines = true;
             listViewEmployee.Location = new Point(12, 586);
             listViewEmployee.Name = "listViewEmployee";
@@ -77,13 +79,28 @@
             columnHeader6.Text = "Telefoní číslo";
             columnHeader6.Width = 100;
             // 
+            // btnEmployeeDelete
+            // 
+            btnEmployeeDelete.Location = new Point(12, 557);
+            btnEmployeeDelete.Name = "btnEmployeeDelete";
+            btnEmployeeDelete.Size = new Size(134, 23);
+            btnEmployeeDelete.TabIndex = 1;
+            btnEmployeeDelete.Text = "mazání zaměstnance";
+            btnEmployeeDelete.UseVisualStyleBackColor = true;
+            btnEmployeeDelete.Click += btnEmployeeDelete_Click;
+            // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
             ClientSize = new Size(1563, 977);
+            Controls.Add(btnEmployeeDelete);
             Controls.Add(listViewEmployee);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            MaximizeBox = false;
             Name = "formAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "formAdmin";
             Load += formAdmin_Load;
             ResumeLayout(false);
@@ -98,5 +115,6 @@
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
+        private Button btnEmployeeDelete;
     }
 }

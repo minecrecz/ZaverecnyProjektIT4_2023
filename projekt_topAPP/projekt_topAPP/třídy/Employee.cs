@@ -17,6 +17,15 @@ namespace projekt_topAPP.třídy
             Email = email;
             Phone = phone;
         }
+        public Employee(string firstN, string foreN, string birthDate, string email, string phone)
+        {
+            PersonalID = -1;
+            FirstName = firstN;
+            ForeName = foreN;
+            BirthDate = birthDate;
+            Email = email;
+            Phone = phone;
+        }
 
 
         public int PersonalID { get; set; }

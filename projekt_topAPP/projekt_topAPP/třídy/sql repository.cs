@@ -129,14 +129,14 @@ namespace projekt_topAPP
             }
             return employees;
         }
-        public void DeleteEmployee(string id)
+        public void DeleteEmployee(string personalID)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 using (SqlCommand command = connection.CreateCommand())
                 {
-                    command.CommandText = $"delete from Employee where PersonalID={id}";
+                    command.CommandText = $"delete from Employee where PersonalID={personalID}";
                     command.ExecuteNonQuery();
                 }
                 connection.Close();
