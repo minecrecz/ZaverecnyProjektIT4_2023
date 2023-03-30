@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace projekt_topAPP.třídy
 {
-    internal class Employee
+    public class Employee
     {
         public Employee(int personalID, string firstN, string foreN, string birthDate, string email, string phone)
         {

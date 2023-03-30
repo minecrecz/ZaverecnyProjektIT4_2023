@@ -9,7 +9,7 @@ namespace projekt_topAPP
         {
             InitializeComponent();
             sql_Repository = new sql_repository();
- 
+
 
 
         }/*

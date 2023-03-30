@@ -35,14 +35,13 @@
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
-            txtSearchEmployee = new TextBox();
             SuspendLayout();
             // 
             // listViewEmployee
             // 
             listViewEmployee.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
             listViewEmployee.GridLines = true;
-            listViewEmployee.Location = new Point(12, 47);
+            listViewEmployee.Location = new Point(12, 586);
             listViewEmployee.Name = "listViewEmployee";
             listViewEmployee.Size = new Size(374, 379);
             listViewEmployee.TabIndex = 0;
@@ -75,25 +74,16 @@
             // 
             columnHeader6.Text = "Telefoní číslo";
             // 
-            // txtSearchEmployee
-            // 
-            txtSearchEmployee.Location = new Point(115, 18);
-            txtSearchEmployee.Name = "txtSearchEmployee";
-            txtSearchEmployee.Size = new Size(165, 23);
-            txtSearchEmployee.TabIndex = 1;
-            // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1265, 785);
-            Controls.Add(txtSearchEmployee);
+            ClientSize = new Size(1563, 977);
             Controls.Add(listViewEmployee);
             Name = "formAdmin";
             Text = "formAdmin";
             Load += formAdmin_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -105,6 +95,5 @@
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
-        private TextBox txtSearchEmployee;
     }
 }

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 namespace projekt_topAPP
 {
     public partial class formAdmin : Form
-        
+
     {
-        
+
         sql_repository Sql_repository;
         private Employee employee;
 
@@ -28,12 +28,12 @@ namespace projekt_topAPP
         private void formAdmin_Load(object sender, EventArgs e)
         {
             listViewEmployee.Items.Clear();
-              var employees =Sql_repository.GetEmployees();
+            var employees = Sql_repository.GetEmployees();
             foreach (var row in employees)
             {
-                listViewEmployee.Items.Add(new ListViewItem(new string[] { employee.ForeName, employee.FirstName,Convert.ToString(employee.PersonalID) ,}));
+                listViewEmployee.Items.Add(new ListViewItem(new string[] { employee.ForeName, employee.FirstName, Convert.ToString(employee.PersonalID), }));
             }
         }
-        
+
     }
 }

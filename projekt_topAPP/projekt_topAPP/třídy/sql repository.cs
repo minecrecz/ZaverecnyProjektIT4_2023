@@ -8,7 +8,7 @@ using projekt_topAPP.třídy;
 
 namespace projekt_topAPP
 {
-    public partial class sql_repository
+    public class sql_repository
     {
         
         private string connectionString = @"Data Source=vps.jhlavacek.cz;Initial Catalog=Dvorak;User ID=DvorakAdam;Password=********;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
@@ -105,21 +105,23 @@ namespace projekt_topAPP
         */
          public List<Employee> GetEmployees()
         {
+            
             List<Employee> employees = new List<Employee>();
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+
             {
-                
                 using (SqlCommand cmd = sqlConnection.CreateCommand())
                 {
                     cmd.CommandText = "SELECT * FROM Employee";
+                    
                     sqlConnection.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
 
-                            employees.Add(new Employee((int)reader["PersonalID"], reader["FirstName"].ToString(), reader["Forename"].ToString(), reader["Email"].ToString(), reader["Phone"].ToString(), reader["BirthDay"].ToString()));
-                           
+                            employees.Add(new Employee(Convert.ToInt32(reader["PersonalID"]), reader["FirstName"].ToString(), reader["Forename"].ToString(), reader["Email"].ToString(), reader["Phone"].ToString(), reader["BirthDay"].ToString()));
+
                         }
                     }
                 }
