@@ -8,7 +8,7 @@ using projekt_topAPP.třídy;
 
 namespace projekt_topAPP
 {
-    internal class sql_repository
+    public class sql_repository
     {
         
         private string connectionString = @"Data Source=vps.jhlavacek.cz;Initial Catalog=Dvorak;User ID=DvorakAdam;Password=********;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
