@@ -44,7 +44,7 @@
             listViewEmployee.GridLines = true;
             listViewEmployee.Location = new Point(12, 586);
             listViewEmployee.Name = "listViewEmployee";
-            listViewEmployee.Size = new Size(499, 379);
+            listViewEmployee.Size = new Size(506, 379);
             listViewEmployee.TabIndex = 0;
             listViewEmployee.UseCompatibleStateImageBehavior = false;
             listViewEmployee.View = View.Details;
