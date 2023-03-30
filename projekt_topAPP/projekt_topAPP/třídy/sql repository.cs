@@ -11,7 +11,7 @@ namespace projekt_topAPP
     internal class sql_repository
     {
         
-        private string connectionString = @"Data Source=vps.jhlavacek.cz;Initial Catalog=Dvorak;User ID=DvorakAdam;Password=Dv0r@k@d@m;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        private string connectionString = "Data Source=vps.jhlavacek.cz;Initial Catalog=Dvorak;User ID=DvorakAdam;Password=Dv0r@k@d@m;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         /*
         private List<User> GetUsers()
         {
