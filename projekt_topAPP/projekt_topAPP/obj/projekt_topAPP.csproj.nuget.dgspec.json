@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dvora\\Desktop\\prg\\projekt_topAPP\\projekt_topAPP\\projekt_topAPP.csproj": {}
+    "C:\\Users\\dvora\\Source\\Repos\\ZaverecnyProjektIT4_2023\\projekt_topAPP\\projekt_topAPP\\projekt_topAPP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dvora\\Desktop\\prg\\projekt_topAPP\\projekt_topAPP\\projekt_topAPP.csproj": {
+    "C:\\Users\\dvora\\Source\\Repos\\ZaverecnyProjektIT4_2023\\projekt_topAPP\\projekt_topAPP\\projekt_topAPP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dvora\\Desktop\\prg\\projekt_topAPP\\projekt_topAPP\\projekt_topAPP.csproj",
+        "projectUniqueName": "C:\\Users\\dvora\\Source\\Repos\\ZaverecnyProjektIT4_2023\\projekt_topAPP\\projekt_topAPP\\projekt_topAPP.csproj",
         "projectName": "projekt_topAPP",
-        "projectPath": "C:\\Users\\dvora\\Desktop\\prg\\projekt_topAPP\\projekt_topAPP\\projekt_topAPP.csproj",
+        "projectPath": "C:\\Users\\dvora\\Source\\Repos\\ZaverecnyProjektIT4_2023\\projekt_topAPP\\projekt_topAPP\\projekt_topAPP.csproj",
         "packagesPath": "C:\\Users\\dvora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dvora\\Desktop\\prg\\projekt_topAPP\\projekt_topAPP\\obj\\",
+        "outputPath": "C:\\Users\\dvora\\Source\\Repos\\ZaverecnyProjektIT4_2023\\projekt_topAPP\\projekt_topAPP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dvora\\AppData\\Roaming\\NuGet\\NuGet.Config",

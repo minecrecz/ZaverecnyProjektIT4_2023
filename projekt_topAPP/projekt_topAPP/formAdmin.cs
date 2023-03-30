@@ -17,8 +17,8 @@ namespace projekt_topAPP
         
         sql_repository Sql_repository;
         private Employee employee;
-        private List<string[]> employees;
-        
+
+
         public formAdmin()
         {
             InitializeComponent();
@@ -28,10 +28,10 @@ namespace projekt_topAPP
         private void formAdmin_Load(object sender, EventArgs e)
         {
             listViewEmployee.Items.Clear();
-            var employee = Sql_repository.GetEmployees();
+              var employees =Sql_repository.GetEmployees();
             foreach (var row in employees)
             {
-                listViewEmployee.Items.Add(new ListViewItem(row));
+                listViewEmployee.Items.Add(new ListViewItem(new string[] { employee.ForeName, employee.FirstName,Convert.ToString(employee.PersonalID) ,}));
             }
         }
         
