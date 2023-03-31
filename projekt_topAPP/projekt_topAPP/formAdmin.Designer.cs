@@ -36,6 +36,7 @@
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
             btnEmployeeDelete = new Button();
+            btnAddEmployeeForm = new Button();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -89,12 +90,22 @@
             btnEmployeeDelete.UseVisualStyleBackColor = true;
             btnEmployeeDelete.Click += btnEmployeeDelete_Click;
             // 
+            // btnAddEmployeeForm
+            // 
+            btnAddEmployeeForm.Location = new Point(180, 557);
+            btnAddEmployeeForm.Name = "btnAddEmployeeForm";
+            btnAddEmployeeForm.Size = new Size(129, 23);
+            btnAddEmployeeForm.TabIndex = 2;
+            btnAddEmployeeForm.Text = "přídání zaměstnanců";
+            btnAddEmployeeForm.UseVisualStyleBackColor = true;
+            // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             ClientSize = new Size(1563, 977);
+            Controls.Add(btnAddEmployeeForm);
             Controls.Add(btnEmployeeDelete);
             Controls.Add(listViewEmployee);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -116,5 +127,6 @@
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
         private Button btnEmployeeDelete;
+        private Button btnAddEmployeeForm;
     }
 }

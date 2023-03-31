@@ -17,7 +17,7 @@ namespace projekt_topAPP.třídy
             Email = email;
             Phone = phone;
         }
-        public Employee(string firstN, string foreN, string birthDate, string email, string phone)
+        public Employee(NumericUpDown txtPersonalID, string firstN, string foreN, string birthDate, string email, string phone)
         {
             PersonalID = -1;
             FirstName = firstN;

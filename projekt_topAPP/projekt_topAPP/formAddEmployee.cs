@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace projekt_topAPP
 {
-    public partial class AddHours : Form
+    public partial class AddEmployee : Form
     {
-        public AddHours()
+        public AddEmployee()
         {
             InitializeComponent();
         }

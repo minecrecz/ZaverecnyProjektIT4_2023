@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace projekt_topAPP
 {
-    public partial class AddUser : Form
+    public partial class formAddUser : Form
     {
-        public AddUser()
+        public formAddUser()
         {
             InitializeComponent();
         }
