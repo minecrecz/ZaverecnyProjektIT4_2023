@@ -72,6 +72,25 @@ namespace projekt_topAPP
                 connection.Close();
             }
         }
+        public static void UpdateEmployee(int PersonalID,Employee employee)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using(SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = $"UPDATE Employee set FirstName=@FirstNameValue, Forename=@ForenameValue,BirthDay=@BirthDayValue,Email=@EmailValue,Phone=@PhoneValue WHERE PersonalID=@personalID";
+                    command.Parameters.AddWithValue("personalID", employee.PersonalID);
+                    command.Parameters.AddWithValue("@FirstNameValue", employee.FirstName);
+                    command.Parameters.AddWithValue("@ForenameValue", employee.ForeName);
+                    command.Parameters.AddWithValue("@BirthDayValue", employee.BirthDate);
+                    command.Parameters.AddWithValue("@EmailValue", employee.Email);
+                    command.Parameters.AddWithValue("@PhoneValue", employee.Phone);
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+        }
 
 
         public static void RegisterUser(string username, string password, string rights)
