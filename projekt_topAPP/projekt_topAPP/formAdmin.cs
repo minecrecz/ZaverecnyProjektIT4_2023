@@ -56,6 +56,9 @@ namespace projekt_topAPP
 
         private void btnAddEmployeeForm_Click(object sender, EventArgs e)
         {
+            formAddEmployee formAddEmployee = new formAddEmployee();
+            
+            formAddEmployee.ShowDialog();
             
         }
     }

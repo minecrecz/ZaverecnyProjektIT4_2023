@@ -39,9 +39,12 @@ namespace projekt_topAPP
             if (personalID == -1)
             {
                 SqlRepository.AddEmployee(new Employee(txtFirstName.Text, txtForeName.Text, txtBirthDay.Text, txtEmail.Text, txtNumber.Text));
+                MessageBox.Show("uživatel přídán do databáze");
             }
 
         }
 
+
+        
     }
 }

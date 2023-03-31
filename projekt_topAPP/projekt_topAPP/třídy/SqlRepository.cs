@@ -60,8 +60,8 @@ namespace projekt_topAPP
                 connection.Open();
                 using (SqlCommand command = connection.CreateCommand())
                 {
-                    command.CommandText = $"insert into Employee (PersonalID,FirstName,Forename,BirthDay,Email,Phone) VALUES (@PersonalIDValue,@FirstNameValue,@ForenameValue,@BirthDayValue,@EmailValue,@PhoneValue)";
-                    command.Parameters.AddWithValue("@PersovalIDValue", employee.PersonalID);
+                    command.CommandText = $"insert into Employee (FirstName,Forename,BirthDay,Email,Phone) VALUES (@FirstNameValue,@ForenameValue,@BirthDayValue,@EmailValue,@PhoneValue)";
+                    
                     command.Parameters.AddWithValue("@FirstNameValue", employee.FirstName);
                     command.Parameters.AddWithValue("@ForenameValue", employee.ForeName);
                     command.Parameters.AddWithValue("@BirthDayValue", employee.BirthDate);
