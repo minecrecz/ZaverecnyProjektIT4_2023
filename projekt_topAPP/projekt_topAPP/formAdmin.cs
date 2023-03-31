@@ -22,6 +22,7 @@ namespace projekt_topAPP
         public formAdmin()
         {
             InitializeComponent();
+           
         }
 
         private void formAdmin_Load(object sender, EventArgs e)

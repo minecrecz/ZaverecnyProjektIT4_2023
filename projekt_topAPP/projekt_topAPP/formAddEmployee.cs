@@ -43,7 +43,8 @@ namespace projekt_topAPP
             }
             else
             {
-                SqlRepository.UpdateEmployee(new Employee(txtFirstName.Text, txtForeName.Text, txtBirthDay.Text, txtEmail.Text, txtNumber.Text));
+                SqlRepository.UpdateEmployee(personalID,new Employee(txtFirstName.Text, txtForeName.Text, txtBirthDay.Text, txtEmail.Text, txtNumber.Text));
+                MessageBox.Show("uživatel upraven");
             }
 
         }
