@@ -43,13 +43,16 @@ namespace projekt_topAPP
             }
             else
             {
-                SqlRepository.UpdateEmployee(personalID,new Employee(txtFirstName.Text, txtForeName.Text, txtBirthDay.Text, txtEmail.Text, txtNumber.Text));
+                SqlRepository.UpdateEmployee(personalID, new Employee(txtFirstName.Text, txtForeName.Text, txtBirthDay.Text, txtEmail.Text, txtNumber.Text));
                 MessageBox.Show("uživatel upraven");
             }
 
         }
 
-
-        
+        private void btnEditEmployee_Click(object sender, EventArgs e)
+        {
+            SqlRepository.UpdateEmployee(personalID, new Employee(txtFirstName.Text, txtForeName.Text, txtBirthDay.Text, txtEmail.Text, txtNumber.Text));
+            MessageBox.Show("uživatel upraven");
+        }
     }
 }
