@@ -22,12 +22,13 @@ namespace projekt_topAPP
         public formAdmin()
         {
             InitializeComponent();
-           
+
         }
 
         private void formAdmin_Load(object sender, EventArgs e)
         {
             GetEmployees();
+            GetContracs();
         }
         private void GetEmployees()
         {
@@ -58,9 +59,23 @@ namespace projekt_topAPP
         private void btnAddEmployeeForm_Click(object sender, EventArgs e)
         {
             formAddEmployee formAddEmployee = new formAddEmployee();
-            
+
             formAddEmployee.ShowDialog();
-            
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void GetContracs()
+        {
+            listViewContract.Items.Clear();
+            var contracts = SqlRepository.GetContracts();
+            foreach (var contract in SqlRepository.GetContracts())
+            {
+                listViewContract.Items.Add(contract.ToListViewContract());
+            }
         }
     }
 }

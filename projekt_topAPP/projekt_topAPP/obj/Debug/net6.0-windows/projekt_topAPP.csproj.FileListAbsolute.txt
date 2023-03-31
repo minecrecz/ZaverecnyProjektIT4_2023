@@ -51,8 +51,8 @@ C:\Users\dvora\Source\Repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topA
 C:\Users\dvora\Source\Repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topAPP\obj\Debug\net6.0-windows\projekt_topAPP.pdb
 C:\Users\dvora\Source\Repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topAPP\obj\Debug\net6.0-windows\projekt_topAPP.genruntimeconfig.cache
 C:\Users\dvora\Source\Repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topAPP\obj\Debug\net6.0-windows\ref\projekt_topAPP.dll
-C:\Users\dvora\source\repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topAPP\obj\Debug\net6.0-windows\projekt_topAPP.formAddContact.resources
 C:\Users\dvora\source\repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topAPP\obj\Debug\net6.0-windows\projekt_topAPP.formAddEmployee.resources
 C:\Users\dvora\source\repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topAPP\obj\Debug\net6.0-windows\projekt_topAPP.formAddHours.resources
 C:\Users\dvora\source\repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topAPP\obj\Debug\net6.0-windows\projekt_topAPP.formAddUser.resources
 C:\Users\dvora\source\repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topAPP\obj\Debug\net6.0-windows\projekt_topAPP.formAddWork.resources
+C:\Users\dvora\source\repos\ZaverecnyProjektIT4_2023\projekt_topAPP\projekt_topAPP\obj\Debug\net6.0-windows\projekt_topAPP.formAddContract.resources

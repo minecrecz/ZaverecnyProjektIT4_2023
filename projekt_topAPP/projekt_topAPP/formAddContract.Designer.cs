@@ -1,6 +1,6 @@
 ﻿namespace projekt_topAPP
 {
-    partial class formAddContact
+    partial class formAddContract
     {
         /// <summary>
         /// Required designer variable.

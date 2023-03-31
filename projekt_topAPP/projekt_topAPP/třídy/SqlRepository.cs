@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -142,6 +143,32 @@ namespace projekt_topAPP
             command.Parameters.AddWithValue("id", id);
             command.ExecuteNonQuery();
             conn.Close();
+        }
+        public static List<projekt_topAPP.třídy.Contract> GetContracts()
+        {
+
+            List<projekt_topAPP.třídy.Contract> contracts = new List<projekt_topAPP.třídy.Contract>();
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+
+            {
+                using (SqlCommand cmd = sqlConnection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM Contract";
+
+                    sqlConnection.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            contracts.Add(new projekt_topAPP.třídy.Contract(reader.GetInt32(0), reader["Customer"].ToString(), reader["Description"].ToString()));
+
+                        }
+                    }
+                }
+                sqlConnection.Close();
+            }
+            return contracts;
         }
     }
 }

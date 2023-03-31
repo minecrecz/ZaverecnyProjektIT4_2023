@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace projekt_topAPP
 {
-    public partial class formAddContact : Form
+    public partial class formAddContract : Form
     {
-        public formAddContact()
+        public formAddContract()
         {
             InitializeComponent();
         }

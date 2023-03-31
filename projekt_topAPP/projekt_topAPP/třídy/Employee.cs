@@ -39,6 +39,7 @@ namespace projekt_topAPP.třídy
         {
            return new ListViewItem(new string[] {PersonalID.ToString(), FirstName, ForeName,BirthDate ,Email,Phone,});
         }
-        
+
+       
     }
 }

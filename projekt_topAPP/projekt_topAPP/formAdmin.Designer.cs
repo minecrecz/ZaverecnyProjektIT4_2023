@@ -37,6 +37,10 @@
             columnHeader6 = new ColumnHeader();
             btnEmployeeDelete = new Button();
             btnAddEmployeeForm = new Button();
+            listViewContract = new ListView();
+            columnHeader7 = new ColumnHeader();
+            columnHeader8 = new ColumnHeader();
+            columnHeader9 = new ColumnHeader();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -100,12 +104,40 @@
             btnAddEmployeeForm.UseVisualStyleBackColor = true;
             btnAddEmployeeForm.Click += btnAddEmployeeForm_Click;
             // 
+            // listViewContract
+            // 
+            listViewContract.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9 });
+            listViewContract.GridLines = true;
+            listViewContract.Location = new Point(574, 587);
+            listViewContract.Name = "listViewContract";
+            listViewContract.Size = new Size(334, 378);
+            listViewContract.TabIndex = 3;
+            listViewContract.UseCompatibleStateImageBehavior = false;
+            listViewContract.View = View.Details;
+            listViewContract.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            // 
+            // columnHeader7
+            // 
+            columnHeader7.Text = "ID zakázky";
+            columnHeader7.Width = 90;
+            // 
+            // columnHeader8
+            // 
+            columnHeader8.Text = "zákazník";
+            columnHeader8.Width = 90;
+            // 
+            // columnHeader9
+            // 
+            columnHeader9.Text = "Popis";
+            columnHeader9.Width = 150;
+            // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             ClientSize = new Size(1563, 977);
+            Controls.Add(listViewContract);
             Controls.Add(btnAddEmployeeForm);
             Controls.Add(btnEmployeeDelete);
             Controls.Add(listViewEmployee);
@@ -129,5 +161,9 @@
         private ColumnHeader columnHeader6;
         private Button btnEmployeeDelete;
         private Button btnAddEmployeeForm;
+        private ListView listViewContract;
+        private ColumnHeader columnHeader7;
+        private ColumnHeader columnHeader8;
+        private ColumnHeader columnHeader9;
     }
 }
