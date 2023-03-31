@@ -98,6 +98,7 @@
             btnAddEmployeeForm.TabIndex = 2;
             btnAddEmployeeForm.Text = "přídání zaměstnanců";
             btnAddEmployeeForm.UseVisualStyleBackColor = true;
+            btnAddEmployeeForm.Click += btnAddEmployeeForm_Click;
             // 
             // formAdmin
             // 

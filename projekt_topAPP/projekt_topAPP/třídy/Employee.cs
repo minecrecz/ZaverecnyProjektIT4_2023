@@ -8,18 +8,18 @@ namespace projekt_topAPP.třídy
 {
     public class Employee
     {
-        public Employee(int personalID, string firstN, string foreN, string birthDate, string email, string phone)
+        public Employee( string firstN, string foreN, string birthDate, string email, string phone)
         {
-            PersonalID = personalID;
+            
             FirstName = firstN;
             ForeName = foreN;
             BirthDate = birthDate;
             Email = email;
             Phone = phone;
         }
-        public Employee(NumericUpDown txtPersonalID, string firstN, string foreN, string birthDate, string email, string phone)
+        public Employee(int personalID, string firstN, string foreN, string birthDate, string email, string phone)
         {
-            PersonalID = -1;
+            PersonalID = personalID;
             FirstName = firstN;
             ForeName = foreN;
             BirthDate = birthDate;

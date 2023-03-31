@@ -16,14 +16,12 @@ namespace projekt_topAPP
 
     {
 
-        sql_repository Sql_repo;
 
 
 
         public formAdmin()
         {
             InitializeComponent();
-            Sql_repo = new sql_repository();
         }
 
         private void formAdmin_Load(object sender, EventArgs e)
@@ -33,8 +31,8 @@ namespace projekt_topAPP
         private void GetEmployees()
         {
             listViewEmployee.Items.Clear();
-            var employees = Sql_repo.GetEmployees();
-            foreach (var employee in Sql_repo.GetEmployees())
+            var employees = SqlRepository.GetEmployees();
+            foreach (var employee in SqlRepository.GetEmployees())
             {
                 listViewEmployee.Items.Add(employee.ToListViewEmployee());
             }
@@ -46,7 +44,7 @@ namespace projekt_topAPP
             if (listViewEmployee.SelectedIndices.Count > 0)
             {
                 var id = listViewEmployee.Items[listViewEmployee.SelectedIndices[0]].SubItems[0].Text;
-                Sql_repo.DeleteEmployee(id);
+                SqlRepository.DeleteEmployee(id);
                 GetEmployees();
             }
             else
@@ -54,6 +52,11 @@ namespace projekt_topAPP
                 MessageBox.Show("Vyber položku");
             }
 
+        }
+
+        private void btnAddEmployeeForm_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

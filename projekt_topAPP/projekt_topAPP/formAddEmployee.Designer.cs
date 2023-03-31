@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            txtPersonalID = new TextBox();
             txtFirstName = new TextBox();
             txtForeName = new TextBox();
             txtEmail = new TextBox();
@@ -44,19 +42,10 @@
             button1 = new Button();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(29, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(68, 15);
-            label1.TabIndex = 0;
-            label1.Text = "PesrsonalID";
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(153, 37);
+            label2.Location = new Point(86, 37);
             label2.Name = "label2";
             label2.Size = new Size(42, 15);
             label2.TabIndex = 1;
@@ -65,7 +54,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(256, 37);
+            label3.Location = new Point(204, 37);
             label3.Name = "label3";
             label3.Size = new Size(51, 15);
             label3.TabIndex = 2;
@@ -74,7 +63,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(393, 37);
+            label4.Location = new Point(343, 37);
             label4.Name = "label4";
             label4.Size = new Size(36, 15);
             label4.TabIndex = 3;
@@ -83,50 +72,43 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(522, 37);
+            label5.Location = new Point(495, 37);
             label5.Name = "label5";
             label5.Size = new Size(75, 15);
             label5.TabIndex = 4;
             label5.Text = "Telefoní číslo";
             // 
-            // txtPersonalID
-            // 
-            txtPersonalID.Location = new Point(12, 72);
-            txtPersonalID.Name = "txtPersonalID";
-            txtPersonalID.Size = new Size(100, 23);
-            txtPersonalID.TabIndex = 5;
-            // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(118, 72);
+            txtFirstName.Location = new Point(54, 74);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(111, 23);
             txtFirstName.TabIndex = 6;
             // 
             // txtForeName
             // 
-            txtForeName.Location = new Point(235, 72);
+            txtForeName.Location = new Point(190, 74);
             txtForeName.Name = "txtForeName";
             txtForeName.Size = new Size(102, 23);
             txtForeName.TabIndex = 7;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(343, 72);
+            txtEmail.Location = new Point(309, 74);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(146, 23);
             txtEmail.TabIndex = 8;
             // 
             // txtNumber
             // 
-            txtNumber.Location = new Point(495, 72);
+            txtNumber.Location = new Point(476, 74);
             txtNumber.Name = "txtNumber";
             txtNumber.Size = new Size(154, 23);
             txtNumber.TabIndex = 9;
             // 
             // txtBirthDay
             // 
-            txtBirthDay.Location = new Point(655, 74);
+            txtBirthDay.Location = new Point(645, 74);
             txtBirthDay.Name = "txtBirthDay";
             txtBirthDay.Size = new Size(108, 23);
             txtBirthDay.TabIndex = 10;
@@ -135,7 +117,7 @@
             // 
             label6.AutoSize = true;
             label6.FlatStyle = FlatStyle.Flat;
-            label6.Location = new Point(663, 37);
+            label6.Location = new Point(645, 37);
             label6.Name = "label6";
             label6.Size = new Size(91, 15);
             label6.TabIndex = 11;
@@ -145,7 +127,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(669, 58);
+            label7.Location = new Point(655, 58);
             label7.Name = "label7";
             label7.Size = new Size(85, 13);
             label7.TabIndex = 12;
@@ -159,9 +141,8 @@
             button1.TabIndex = 13;
             button1.Text = "Přidat";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
-            // AddEmployee
+            // formAddEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -174,26 +155,21 @@
             Controls.Add(txtEmail);
             Controls.Add(txtForeName);
             Controls.Add(txtFirstName);
-            Controls.Add(txtPersonalID);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "AddEmployee";
+            Name = "formAddEmployee";
             Text = "Přidání zaměstnance";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox txtPersonalID;
         private TextBox txtFirstName;
         private TextBox txtForeName;
         private TextBox txtEmail;

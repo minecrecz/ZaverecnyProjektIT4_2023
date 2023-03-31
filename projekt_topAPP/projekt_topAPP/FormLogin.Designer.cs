@@ -50,13 +50,16 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(100, 23);
             txtUsername.TabIndex = 1;
+            txtUsername.TextChanged += TextBoxes_TextChanged;
             // 
             // txtPassword
             // 
             txtPassword.Location = new Point(125, 250);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '•';
             txtPassword.Size = new Size(100, 23);
             txtPassword.TabIndex = 2;
+            txtPassword.TextChanged += TextBoxes_TextChanged;
             // 
             // heslo
             // 
@@ -69,12 +72,14 @@
             // 
             // btnLogin
             // 
+            btnLogin.Enabled = false;
             btnLogin.Location = new Point(136, 316);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(75, 23);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Přihlásit";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // FormLogin
             // 
