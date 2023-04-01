@@ -21,6 +21,12 @@ namespace projekt_topAPP.třídy
             Name = name;
             Role = role;
         }
+        public User( string name, string role)
+        {
+            
+            Name = name;
+            Role = role;
+        }
         public ListViewItem ToListViewUser()
         {
             return new ListViewItem(new string[] { ID.ToString(), Name, Role });

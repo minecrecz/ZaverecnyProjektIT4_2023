@@ -233,11 +233,48 @@ namespace projekt_topAPP
                 connection.Open();
                 using (SqlCommand command = connection.CreateCommand())
                 {
-                    command.CommandText = $"delete from User where ID={ID}";
+                    command.CommandText = $"delete from [User] where ID={ID}";
                     command.ExecuteNonQuery();
                 }
                 connection.Close();
             }
         }
+        public static List<Work> GetWorks()
+        {
+            List<Work> works = new List<Work>();
+            using(SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using(SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = "select IDWork,NameWork,DescriptionWork from Work";
+                    connection.Open();
+                    using (SqlDataReader reader= command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            works.Add(new Work (reader.GetInt32(0), reader["NameWork"].ToString(), reader["DescriptionWork"].ToString()));
+                        }
+                    }
+                }
+                connection.Close ();
+            }
+            return works;
+        }
+        public static void DeleteWork(string IDWork)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = sqlConnection.CreateCommand())
+                {
+                    sqlCommand.CommandText = $"delete from [Work] where IDWork={IDWork}";
+                    sqlCommand.ExecuteNonQuery();
+                }
+                sqlConnection.Close();
+            }
+        }
+        
+        
+
     }
 }

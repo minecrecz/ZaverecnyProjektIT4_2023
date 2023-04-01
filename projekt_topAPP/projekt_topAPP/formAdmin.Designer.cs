@@ -49,6 +49,11 @@
             columnHeader12 = new ColumnHeader();
             btnUserDelete = new Button();
             btnAddUser = new Button();
+            listViewWork = new ListView();
+            columnHeader13 = new ColumnHeader();
+            columnHeader14 = new ColumnHeader();
+            columnHeader15 = new ColumnHeader();
+            button2 = new Button();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -58,6 +63,7 @@
             listViewEmployee.FullRowSelect = true;
             listViewEmployee.GridLines = true;
             listViewEmployee.Location = new Point(12, 586);
+            listViewEmployee.MultiSelect = false;
             listViewEmployee.Name = "listViewEmployee";
             listViewEmployee.Size = new Size(506, 379);
             listViewEmployee.TabIndex = 0;
@@ -121,8 +127,9 @@
             listViewContract.FullRowSelect = true;
             listViewContract.GridLines = true;
             listViewContract.Location = new Point(574, 587);
+            listViewContract.MultiSelect = false;
             listViewContract.Name = "listViewContract";
-            listViewContract.Size = new Size(334, 378);
+            listViewContract.Size = new Size(386, 378);
             listViewContract.TabIndex = 3;
             listViewContract.UseCompatibleStateImageBehavior = false;
             listViewContract.View = View.Details;
@@ -141,7 +148,7 @@
             // columnHeader9
             // 
             columnHeader9.Text = "Popis";
-            columnHeader9.Width = 150;
+            columnHeader9.Width = 200;
             // 
             // btnDeleteContract
             // 
@@ -159,7 +166,7 @@
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(754, 558);
+            button1.Location = new Point(806, 558);
             button1.Name = "button1";
             button1.Size = new Size(154, 23);
             button1.TabIndex = 5;
@@ -173,6 +180,7 @@
             listViewUsers.FullRowSelect = true;
             listViewUsers.GridLines = true;
             listViewUsers.Location = new Point(12, 121);
+            listViewUsers.MultiSelect = false;
             listViewUsers.Name = "listViewUsers";
             listViewUsers.Size = new Size(183, 378);
             listViewUsers.TabIndex = 6;
@@ -211,6 +219,43 @@
             btnAddUser.UseVisualStyleBackColor = true;
             btnAddUser.Click += btnAddUser_Click;
             // 
+            // listViewWork
+            // 
+            listViewWork.Columns.AddRange(new ColumnHeader[] { columnHeader13, columnHeader14, columnHeader15 });
+            listViewWork.FullRowSelect = true;
+            listViewWork.GridLines = true;
+            listViewWork.Location = new Point(248, 125);
+            listViewWork.MultiSelect = false;
+            listViewWork.Name = "listViewWork";
+            listViewWork.Size = new Size(270, 374);
+            listViewWork.TabIndex = 9;
+            listViewWork.UseCompatibleStateImageBehavior = false;
+            listViewWork.View = View.Details;
+            // 
+            // columnHeader13
+            // 
+            columnHeader13.Text = "ID";
+            // 
+            // columnHeader14
+            // 
+            columnHeader14.Text = "název práce";
+            columnHeader14.Width = 90;
+            // 
+            // columnHeader15
+            // 
+            columnHeader15.Text = "popis práce";
+            columnHeader15.Width = 500;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(248, 96);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 23);
+            button2.TabIndex = 10;
+            button2.Text = "mazání práce";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -218,6 +263,8 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1563, 977);
+            Controls.Add(button2);
+            Controls.Add(listViewWork);
             Controls.Add(btnAddUser);
             Controls.Add(btnUserDelete);
             Controls.Add(listViewUsers);
@@ -259,5 +306,10 @@
         private ColumnHeader columnHeader12;
         private Button btnUserDelete;
         private Button btnAddUser;
+        private ListView listViewWork;
+        private ColumnHeader columnHeader13;
+        private ColumnHeader columnHeader14;
+        private ColumnHeader columnHeader15;
+        private Button button2;
     }
 }

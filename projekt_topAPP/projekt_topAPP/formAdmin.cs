@@ -30,6 +30,9 @@ namespace projekt_topAPP
             GetEmployees();
             GetContracs();
             GetUsers();
+            GetWorks();
+
+
         }
         private void GetEmployees()
         {
@@ -102,7 +105,7 @@ namespace projekt_topAPP
         }
         private void GetUsers()
         {
-            listViewContract.Items.Clear();
+            listViewUsers.Items.Clear();
             var users = SqlRepository.GetUsers();
             foreach (var user in SqlRepository.GetUsers())
             {
@@ -129,6 +132,30 @@ namespace projekt_topAPP
         {
             formAddUser formAddUser = new formAddUser();
             formAddUser.ShowDialog();
+        }
+        private void GetWorks()
+        {
+            listViewWork.Items.Clear();
+            var works = SqlRepository.GetWorks();
+            foreach (var work in SqlRepository.GetWorks())
+            {
+                listViewWork.Items.Add(work.ToListViewWork());
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listViewWork.SelectedIndices.Count > 0)
+            {
+                var IDWork = listViewWork.Items[listViewWork.SelectedIndices[0]].SubItems[0].Text;
+                SqlRepository.DeleteWork(IDWork);
+                GetWorks();
+                MessageBox.Show("Položka smazána");
+            }
+            else
+            {
+                MessageBox.Show("vyber položku");
+            }
         }
     }
 }

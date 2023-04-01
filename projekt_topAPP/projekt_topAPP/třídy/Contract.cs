@@ -9,7 +9,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 namespace projekt_topAPP.třídy
 {
     public class Contract
-    {
+    { 
+        public int ContractNumber{ get; set; }
+        public string Customer { get; set; }
+        public string Description { get; set; }
+
         public Contract(int contractNumber, string customer, string description)
         {
             ContractNumber = contractNumber;
@@ -23,9 +27,7 @@ namespace projekt_topAPP.třídy
             Description = description;
         }
 
-        public int ContractNumber{ get; set; }
-        public string Customer { get; set; }
-        public string Description { get; set; }
+       
         public ListViewItem ToListViewContract()
         {
             return new ListViewItem(new string[] { ContractNumber.ToString(), Customer, Description,  });
