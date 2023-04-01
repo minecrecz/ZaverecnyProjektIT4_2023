@@ -106,7 +106,22 @@ namespace projekt_topAPP
             var users = SqlRepository.GetUsers();
             foreach (var user in SqlRepository.GetUsers())
             {
-            listViewUsers.Items.Add(user.ToListViewUser());
+                listViewUsers.Items.Add(user.ToListViewUser());
+            }
+        }
+
+        private void btnUserDelete_Click(object sender, EventArgs e)
+        {
+            if(listViewUsers.SelectedIndices.Count > 0)
+            {
+                var ID = listViewUsers.Items[listViewUsers.SelectedIndices[0]].SubItems[0].Text;
+                SqlRepository.DeleteUser(ID);
+                GetUsers();
+                MessageBox.Show("položka smazána");
+            }
+            else
+            {
+                MessageBox.Show("vyber položku");
             }
         }
     }

@@ -226,5 +226,18 @@ namespace projekt_topAPP
             }
             return users;
         }
+        public static void DeleteUser(string ID)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = $"delete from User where ID={ID}";
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+        }
     }
 }

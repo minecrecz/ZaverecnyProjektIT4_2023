@@ -47,6 +47,7 @@
             columnHeader10 = new ColumnHeader();
             columnHeader11 = new ColumnHeader();
             columnHeader12 = new ColumnHeader();
+            btnUserDelete = new Button();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -189,6 +190,16 @@
             // 
             columnHeader12.Text = "Práva";
             // 
+            // btnUserDelete
+            // 
+            btnUserDelete.Location = new Point(12, 37);
+            btnUserDelete.Name = "btnUserDelete";
+            btnUserDelete.Size = new Size(118, 23);
+            btnUserDelete.TabIndex = 7;
+            btnUserDelete.Text = "odebrat uživatele";
+            btnUserDelete.UseVisualStyleBackColor = true;
+            btnUserDelete.Click += btnUserDelete_Click;
+            // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -196,6 +207,7 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1563, 977);
+            Controls.Add(btnUserDelete);
             Controls.Add(listViewUsers);
             Controls.Add(button1);
             Controls.Add(btnDeleteContract);
@@ -233,5 +245,6 @@
         private ColumnHeader columnHeader10;
         private ColumnHeader columnHeader11;
         private ColumnHeader columnHeader12;
+        private Button btnUserDelete;
     }
 }
