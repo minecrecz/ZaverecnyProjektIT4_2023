@@ -54,6 +54,7 @@
             columnHeader14 = new ColumnHeader();
             columnHeader15 = new ColumnHeader();
             button2 = new Button();
+            btnAddWork = new Button();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -248,13 +249,23 @@
             // 
             // button2
             // 
-            button2.Location = new Point(248, 96);
+            button2.Location = new Point(248, 99);
             button2.Name = "button2";
             button2.Size = new Size(112, 23);
             button2.TabIndex = 10;
             button2.Text = "mazání práce";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            // 
+            // btnAddWork
+            // 
+            btnAddWork.Location = new Point(378, 99);
+            btnAddWork.Name = "btnAddWork";
+            btnAddWork.Size = new Size(140, 23);
+            btnAddWork.TabIndex = 11;
+            btnAddWork.Text = "přidání práce";
+            btnAddWork.UseVisualStyleBackColor = true;
+            btnAddWork.Click += btnAddWork_Click;
             // 
             // formAdmin
             // 
@@ -263,6 +274,7 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1563, 977);
+            Controls.Add(btnAddWork);
             Controls.Add(button2);
             Controls.Add(listViewWork);
             Controls.Add(btnAddUser);
@@ -311,5 +323,6 @@
         private ColumnHeader columnHeader14;
         private ColumnHeader columnHeader15;
         private Button button2;
+        private Button btnAddWork;
     }
 }

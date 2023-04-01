@@ -273,8 +273,24 @@ namespace projekt_topAPP
                 sqlConnection.Close();
             }
         }
-        
-        
+        public static void AddWork(projekt_topAPP.třídy.Work work)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = $"insert into Work (NameWork,DescriptionWork) VALUES (@NameWorkValue,@DescriptionWorkValue)";
+
+                    command.Parameters.AddWithValue("@NameWorkValue", work.NameWork);
+                    command.Parameters.AddWithValue("@DescriptionWorkValue", work.DescriptionWork);
+
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+        }
+
 
     }
 }

@@ -157,5 +157,11 @@ namespace projekt_topAPP
                 MessageBox.Show("vyber položku");
             }
         }
+
+        private void btnAddWork_Click(object sender, EventArgs e)
+        {
+            formAddWork formAddWork = new formAddWork();
+            formAddWork.ShowDialog();
+        }
     }
 }
