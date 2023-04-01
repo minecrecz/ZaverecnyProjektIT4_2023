@@ -93,5 +93,11 @@ namespace projekt_topAPP
                 MessageBox.Show("Vyber položku");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formAddContract formAddContract = new formAddContract();
+            formAddContract.ShowDialog();
+        }
     }
 }

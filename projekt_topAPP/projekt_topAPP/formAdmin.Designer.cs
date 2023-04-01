@@ -42,6 +42,7 @@
             columnHeader8 = new ColumnHeader();
             columnHeader9 = new ColumnHeader();
             btnDeleteContract = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -87,26 +88,29 @@
             // 
             // btnEmployeeDelete
             // 
+            btnEmployeeDelete.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnEmployeeDelete.Location = new Point(12, 557);
             btnEmployeeDelete.Name = "btnEmployeeDelete";
             btnEmployeeDelete.Size = new Size(134, 23);
             btnEmployeeDelete.TabIndex = 1;
-            btnEmployeeDelete.Text = "mazání zaměstnance";
+            btnEmployeeDelete.Text = "Mazání zaměstnance";
             btnEmployeeDelete.UseVisualStyleBackColor = true;
             btnEmployeeDelete.Click += btnEmployeeDelete_Click;
             // 
             // btnAddEmployeeForm
             // 
-            btnAddEmployeeForm.Location = new Point(180, 557);
+            btnAddEmployeeForm.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddEmployeeForm.Location = new Point(314, 557);
             btnAddEmployeeForm.Name = "btnAddEmployeeForm";
             btnAddEmployeeForm.Size = new Size(204, 23);
             btnAddEmployeeForm.TabIndex = 2;
-            btnAddEmployeeForm.Text = "přídání/upravení zaměstnanců";
+            btnAddEmployeeForm.Text = "Přídání/upravení zaměstnanců";
             btnAddEmployeeForm.UseVisualStyleBackColor = true;
             btnAddEmployeeForm.Click += btnAddEmployeeForm_Click;
             // 
             // listViewContract
             // 
+            listViewContract.BackColor = Color.White;
             listViewContract.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9 });
             listViewContract.FullRowSelect = true;
             listViewContract.GridLines = true;
@@ -135,20 +139,36 @@
             // 
             // btnDeleteContract
             // 
+            btnDeleteContract.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnDeleteContract.Location = new Point(574, 557);
             btnDeleteContract.Name = "btnDeleteContract";
             btnDeleteContract.Size = new Size(114, 23);
             btnDeleteContract.TabIndex = 4;
-            btnDeleteContract.Text = "mazání zakázek";
+            btnDeleteContract.Text = "Mazání zakázek";
             btnDeleteContract.UseVisualStyleBackColor = true;
             btnDeleteContract.Click += btnDeleteContract_Click;
+            // 
+            // button1
+            // 
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.Location = new Point(754, 558);
+            button1.Name = "button1";
+            button1.Size = new Size(154, 23);
+            button1.TabIndex = 5;
+            button1.Text = "Přidání/upravení zakázek";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1563, 977);
+            Controls.Add(button1);
             Controls.Add(btnDeleteContract);
             Controls.Add(listViewContract);
             Controls.Add(btnAddEmployeeForm);
@@ -179,5 +199,6 @@
         private ColumnHeader columnHeader8;
         private ColumnHeader columnHeader9;
         private Button btnDeleteContract;
+        private Button button1;
     }
 }
