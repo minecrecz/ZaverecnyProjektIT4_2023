@@ -19,13 +19,13 @@ namespace projekt_topAPP
         {
             InitializeComponent();
         }
-        public formAddUser(string username,string password,string rights)
+        public formAddUser(string username, string password, string rights)
         {
             iD = iD;
             txtUsername.Text = username;
             txtPassword.Text = password;
             comboBox1.SelectedItem = rights;
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace projekt_topAPP
             if (iD == -1)
             {
                 string selectedRights = comboBox1.SelectedItem.ToString();
-                SqlRepository.RegisterUser(txtUsername.Text, txtPassword.Text,selectedRights );
+                SqlRepository.RegisterUser(txtUsername.Text, txtPassword.Text, selectedRights);
                 MessageBox.Show("uživatel přídán do databáze");
 
             }

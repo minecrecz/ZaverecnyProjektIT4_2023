@@ -290,6 +290,61 @@ namespace projekt_topAPP
                 connection.Close();
             }
         }
+        public static List<Hours> GetHours()
+        {
+            List<Hours> hours = new List<Hours>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = "select IDWorkHours,Employee,Contract,WorkType,WorkHours from Hours";
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            hours.Add(new Hours(reader.GetInt32(0), reader["Employee"].ToString(), reader["Contract"].ToString(),reader["WorkType"].ToString(), reader["WorkHours"].ToString()));
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return hours;
+        }
+        public static void DeleteHours(string IDWorkHours)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = sqlConnection.CreateCommand())
+                {
+                    sqlCommand.CommandText = $"delete from [Hours] where IDWorkHours={IDWorkHours}";
+                    sqlCommand.ExecuteNonQuery();
+                }
+                sqlConnection.Close();
+            }
+        }
+        public static void AddHours(projekt_topAPP.třídy.Hours hours)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = $"insert into Hours (Employee,Contract,WorkType,WorkHours) VALUES (@EmployeeValue,@ContractValue,@WorkTypeValue,@WorkHoursValue)";
+
+                    command.Parameters.AddWithValue("@EmployeeValue", hours.Employee);
+                    command.Parameters.AddWithValue("@ContractValue", hours.Contract);
+                    command.Parameters.AddWithValue("@WorkTypeValue", hours.WorkType);
+                    command.Parameters.AddWithValue("@WorkHoursValue", hours.WorkHours);
+                   
+
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+        }
+
 
 
     }

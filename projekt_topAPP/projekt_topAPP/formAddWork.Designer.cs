@@ -74,7 +74,7 @@
             btnAddWork.Name = "btnAddWork";
             btnAddWork.Size = new Size(94, 39);
             btnAddWork.TabIndex = 4;
-            btnAddWork.Text = "Přidej práci";
+            btnAddWork.Text = "přidat";
             btnAddWork.UseVisualStyleBackColor = true;
             btnAddWork.Click += btnAddWork_Click;
             // 

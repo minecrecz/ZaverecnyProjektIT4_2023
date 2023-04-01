@@ -47,7 +47,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(63, 150);
+            label2.Location = new Point(77, 153);
             label2.Name = "label2";
             label2.Size = new Size(79, 15);
             label2.TabIndex = 1;
@@ -55,25 +55,26 @@
             // 
             // txtAddConctractName
             // 
-            txtAddConctractName.Location = new Point(70, 85);
+            txtAddConctractName.Location = new Point(36, 90);
             txtAddConctractName.Name = "txtAddConctractName";
-            txtAddConctractName.Size = new Size(100, 23);
+            txtAddConctractName.Size = new Size(156, 23);
             txtAddConctractName.TabIndex = 2;
             // 
             // txtAddDescription
             // 
-            txtAddDescription.Location = new Point(42, 178);
+            txtAddDescription.Location = new Point(12, 181);
+            txtAddDescription.Multiline = true;
             txtAddDescription.Name = "txtAddDescription";
-            txtAddDescription.Size = new Size(100, 23);
+            txtAddDescription.Size = new Size(214, 127);
             txtAddDescription.TabIndex = 3;
             // 
             // btnAddContract
             // 
-            btnAddContract.Location = new Point(80, 247);
+            btnAddContract.Location = new Point(77, 314);
             btnAddContract.Name = "btnAddContract";
             btnAddContract.Size = new Size(75, 23);
             btnAddContract.TabIndex = 4;
-            btnAddContract.Text = "button1";
+            btnAddContract.Text = "přidat";
             btnAddContract.UseVisualStyleBackColor = true;
             btnAddContract.Click += btnAddContract_Click;
             // 

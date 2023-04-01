@@ -55,6 +55,19 @@
             columnHeader15 = new ColumnHeader();
             button2 = new Button();
             btnAddWork = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            listViewHours = new ListView();
+            columnHeader16 = new ColumnHeader();
+            columnHeader17 = new ColumnHeader();
+            columnHeader18 = new ColumnHeader();
+            columnHeader19 = new ColumnHeader();
+            columnHeader20 = new ColumnHeader();
+            button3 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -117,7 +130,7 @@
             btnAddEmployeeForm.Name = "btnAddEmployeeForm";
             btnAddEmployeeForm.Size = new Size(204, 23);
             btnAddEmployeeForm.TabIndex = 2;
-            btnAddEmployeeForm.Text = "Přídání/upravení zaměstnanců";
+            btnAddEmployeeForm.Text = "Přídání zaměstnanců";
             btnAddEmployeeForm.UseVisualStyleBackColor = true;
             btnAddEmployeeForm.Click += btnAddEmployeeForm_Click;
             // 
@@ -171,7 +184,7 @@
             button1.Name = "button1";
             button1.Size = new Size(154, 23);
             button1.TabIndex = 5;
-            button1.Text = "Přidání/upravení zakázek";
+            button1.Text = "Přidání zakázek";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -216,7 +229,7 @@
             btnAddUser.Name = "btnAddUser";
             btnAddUser.Size = new Size(183, 23);
             btnAddUser.TabIndex = 8;
-            btnAddUser.Text = "přidání/upravení uživatele";
+            btnAddUser.Text = "přidání uživatele";
             btnAddUser.UseVisualStyleBackColor = true;
             btnAddUser.Click += btnAddUser_Click;
             // 
@@ -267,13 +280,127 @@
             btnAddWork.UseVisualStyleBackColor = true;
             btnAddWork.Click += btnAddWork_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(57, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 30);
+            label1.TabIndex = 12;
+            label1.Text = "Uživatelé";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(344, 22);
+            label2.Name = "label2";
+            label2.Size = new Size(64, 30);
+            label2.TabIndex = 13;
+            label2.Text = "Práce";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(168, 531);
+            label3.Name = "label3";
+            label3.Size = new Size(131, 30);
+            label3.TabIndex = 14;
+            label3.Text = "Zaměstnanci";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(713, 531);
+            label4.Name = "label4";
+            label4.Size = new Size(87, 30);
+            label4.TabIndex = 15;
+            label4.Text = "Zakázky";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(683, 22);
+            label5.Name = "label5";
+            label5.Size = new Size(161, 30);
+            label5.TabIndex = 16;
+            label5.Text = "Pracovní hodiny";
+            // 
+            // listViewHours
+            // 
+            listViewHours.Columns.AddRange(new ColumnHeader[] { columnHeader16, columnHeader17, columnHeader18, columnHeader19, columnHeader20 });
+            listViewHours.FullRowSelect = true;
+            listViewHours.GridLines = true;
+            listViewHours.Location = new Point(574, 125);
+            listViewHours.Name = "listViewHours";
+            listViewHours.Size = new Size(386, 374);
+            listViewHours.TabIndex = 17;
+            listViewHours.UseCompatibleStateImageBehavior = false;
+            listViewHours.View = View.Details;
+            // 
+            // columnHeader16
+            // 
+            columnHeader16.Text = "ID";
+            columnHeader16.Width = 30;
+            // 
+            // columnHeader17
+            // 
+            columnHeader17.Text = "zaměstnanec";
+            columnHeader17.Width = 100;
+            // 
+            // columnHeader18
+            // 
+            columnHeader18.Text = "zakázka";
+            columnHeader18.Width = 90;
+            // 
+            // columnHeader19
+            // 
+            columnHeader19.Text = "název práce";
+            columnHeader19.Width = 100;
+            // 
+            // columnHeader20
+            // 
+            columnHeader20.Text = "hodiny";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(574, 96);
+            button3.Name = "button3";
+            button3.Size = new Size(153, 23);
+            button3.TabIndex = 18;
+            button3.Text = "mazání pracovní hodiny";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(806, 96);
+            button4.Name = "button4";
+            button4.Size = new Size(154, 23);
+            button4.TabIndex = 19;
+            button4.Text = "přidání pracovní hodiny";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1563, 977);
+            ClientSize = new Size(982, 977);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(listViewHours);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(btnAddWork);
             Controls.Add(button2);
             Controls.Add(listViewWork);
@@ -293,6 +420,7 @@
             Text = "formAdmin";
             Load += formAdmin_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -324,5 +452,18 @@
         private ColumnHeader columnHeader15;
         private Button button2;
         private Button btnAddWork;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private ListView listViewHours;
+        private ColumnHeader columnHeader16;
+        private ColumnHeader columnHeader17;
+        private ColumnHeader columnHeader18;
+        private ColumnHeader columnHeader19;
+        private ColumnHeader columnHeader20;
+        private Button button3;
+        private Button button4;
     }
 }
