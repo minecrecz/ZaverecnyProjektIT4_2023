@@ -41,6 +41,7 @@
             label7 = new Label();
             button1 = new Button();
             btnEditEmployee = new Button();
+            txtPersonalID = new TextBox();
             SuspendLayout();
             // 
             // label2
@@ -154,11 +155,19 @@
             btnEditEmployee.UseVisualStyleBackColor = true;
             btnEditEmployee.Click += btnEditEmployee_Click;
             // 
+            // txtPersonalID
+            // 
+            txtPersonalID.Location = new Point(645, 139);
+            txtPersonalID.Name = "txtPersonalID";
+            txtPersonalID.Size = new Size(100, 23);
+            txtPersonalID.TabIndex = 15;
+            // 
             // formAddEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 180);
+            Controls.Add(txtPersonalID);
             Controls.Add(btnEditEmployee);
             Controls.Add(button1);
             Controls.Add(label7);
@@ -192,5 +201,6 @@
         private Label label7;
         private Button button1;
         private Button btnEditEmployee;
+        private TextBox txtPersonalID;
     }
 }

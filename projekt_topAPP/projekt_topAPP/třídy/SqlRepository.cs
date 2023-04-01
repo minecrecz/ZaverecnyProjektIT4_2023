@@ -170,5 +170,18 @@ namespace projekt_topAPP
             }
             return contracts;
         }
+        public static void DeleteContract(string ContractlNumber)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = $"delete from Contract where ContractNumber={ContractlNumber}";
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+        }
     }
 }

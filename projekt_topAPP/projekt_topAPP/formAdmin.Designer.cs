@@ -41,6 +41,7 @@
             columnHeader7 = new ColumnHeader();
             columnHeader8 = new ColumnHeader();
             columnHeader9 = new ColumnHeader();
+            btnDeleteContract = new Button();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -98,15 +99,16 @@
             // 
             btnAddEmployeeForm.Location = new Point(180, 557);
             btnAddEmployeeForm.Name = "btnAddEmployeeForm";
-            btnAddEmployeeForm.Size = new Size(129, 23);
+            btnAddEmployeeForm.Size = new Size(204, 23);
             btnAddEmployeeForm.TabIndex = 2;
-            btnAddEmployeeForm.Text = "přídání zaměstnanců";
+            btnAddEmployeeForm.Text = "přídání/upravení zaměstnanců";
             btnAddEmployeeForm.UseVisualStyleBackColor = true;
             btnAddEmployeeForm.Click += btnAddEmployeeForm_Click;
             // 
             // listViewContract
             // 
             listViewContract.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9 });
+            listViewContract.FullRowSelect = true;
             listViewContract.GridLines = true;
             listViewContract.Location = new Point(574, 587);
             listViewContract.Name = "listViewContract";
@@ -131,12 +133,23 @@
             columnHeader9.Text = "Popis";
             columnHeader9.Width = 150;
             // 
+            // btnDeleteContract
+            // 
+            btnDeleteContract.Location = new Point(574, 557);
+            btnDeleteContract.Name = "btnDeleteContract";
+            btnDeleteContract.Size = new Size(114, 23);
+            btnDeleteContract.TabIndex = 4;
+            btnDeleteContract.Text = "mazání zakázek";
+            btnDeleteContract.UseVisualStyleBackColor = true;
+            btnDeleteContract.Click += btnDeleteContract_Click;
+            // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             ClientSize = new Size(1563, 977);
+            Controls.Add(btnDeleteContract);
             Controls.Add(listViewContract);
             Controls.Add(btnAddEmployeeForm);
             Controls.Add(btnEmployeeDelete);
@@ -165,5 +178,6 @@
         private ColumnHeader columnHeader7;
         private ColumnHeader columnHeader8;
         private ColumnHeader columnHeader9;
+        private Button btnDeleteContract;
     }
 }

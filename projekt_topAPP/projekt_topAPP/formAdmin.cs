@@ -48,6 +48,7 @@ namespace projekt_topAPP
                 var id = listViewEmployee.Items[listViewEmployee.SelectedIndices[0]].SubItems[0].Text;
                 SqlRepository.DeleteEmployee(id);
                 GetEmployees();
+                MessageBox.Show("Položka smazána");
             }
             else
             {
@@ -75,6 +76,21 @@ namespace projekt_topAPP
             foreach (var contract in SqlRepository.GetContracts())
             {
                 listViewContract.Items.Add(contract.ToListViewContract());
+            }
+        }
+
+        private void btnDeleteContract_Click(object sender, EventArgs e)
+        {
+            if (listViewContract.SelectedIndices.Count > 0)
+            {
+                var contractNumber = listViewContract.Items[listViewContract.SelectedIndices[0]].SubItems[0].Text;
+                SqlRepository.DeleteContract(contractNumber);
+                GetContracs();
+                MessageBox.Show("Položka smazána");
+            }
+            else
+            {
+                MessageBox.Show("Vyber položku");
             }
         }
     }
