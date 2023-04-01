@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace projekt_topAPP.třídy
 {
@@ -18,6 +20,10 @@ namespace projekt_topAPP.třídy
             ID = iD;
             Name = name;
             Role = role;
+        }
+        public ListViewItem ToListViewUser()
+        {
+            return new ListViewItem(new string[] { ID.ToString(), Name, Role });
         }
     }
 }

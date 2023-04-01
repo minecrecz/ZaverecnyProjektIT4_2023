@@ -43,6 +43,10 @@
             columnHeader9 = new ColumnHeader();
             btnDeleteContract = new Button();
             button1 = new Button();
+            listViewUsers = new ListView();
+            columnHeader10 = new ColumnHeader();
+            columnHeader11 = new ColumnHeader();
+            columnHeader12 = new ColumnHeader();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -161,6 +165,30 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // listViewUsers
+            // 
+            listViewUsers.Columns.AddRange(new ColumnHeader[] { columnHeader10, columnHeader11, columnHeader12 });
+            listViewUsers.FullRowSelect = true;
+            listViewUsers.GridLines = true;
+            listViewUsers.Location = new Point(12, 75);
+            listViewUsers.Name = "listViewUsers";
+            listViewUsers.Size = new Size(183, 378);
+            listViewUsers.TabIndex = 6;
+            listViewUsers.UseCompatibleStateImageBehavior = false;
+            listViewUsers.View = View.Details;
+            // 
+            // columnHeader10
+            // 
+            columnHeader10.Text = "ID";
+            // 
+            // columnHeader11
+            // 
+            columnHeader11.Text = "Jméno";
+            // 
+            // columnHeader12
+            // 
+            columnHeader12.Text = "Práva";
+            // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -168,6 +196,7 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1563, 977);
+            Controls.Add(listViewUsers);
             Controls.Add(button1);
             Controls.Add(btnDeleteContract);
             Controls.Add(listViewContract);
@@ -200,5 +229,9 @@
         private ColumnHeader columnHeader9;
         private Button btnDeleteContract;
         private Button button1;
+        private ListView listViewUsers;
+        private ColumnHeader columnHeader10;
+        private ColumnHeader columnHeader11;
+        private ColumnHeader columnHeader12;
     }
 }

@@ -200,5 +200,31 @@ namespace projekt_topAPP
                 connection.Close();
             }
         }
+        public static List<User> GetUsers()
+        {
+
+            List<User> users  = new List<User>();
+            using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+
+            {
+                using (SqlCommand cmd = sqlConnection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT ID,Username,Rights FROM [User]";
+
+                    sqlConnection.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            users.Add(new User(reader.GetInt32(0), reader["Username"].ToString(), reader["Rights"].ToString() ));
+
+                        }
+                    }
+                }
+                sqlConnection.Close();
+            }
+            return users;
+        }
     }
 }

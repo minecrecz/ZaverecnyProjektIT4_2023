@@ -29,6 +29,7 @@ namespace projekt_topAPP
         {
             GetEmployees();
             GetContracs();
+            GetUsers();
         }
         private void GetEmployees()
         {
@@ -98,6 +99,15 @@ namespace projekt_topAPP
         {
             formAddContract formAddContract = new formAddContract();
             formAddContract.ShowDialog();
+        }
+        private void GetUsers()
+        {
+            listViewContract.Items.Clear();
+            var users = SqlRepository.GetUsers();
+            foreach (var user in SqlRepository.GetUsers())
+            {
+            listViewUsers.Items.Add(user.ToListViewUser());
+            }
         }
     }
 }
