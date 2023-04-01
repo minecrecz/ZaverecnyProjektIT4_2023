@@ -48,6 +48,7 @@
             columnHeader11 = new ColumnHeader();
             columnHeader12 = new ColumnHeader();
             btnUserDelete = new Button();
+            btnAddUser = new Button();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -171,7 +172,7 @@
             listViewUsers.Columns.AddRange(new ColumnHeader[] { columnHeader10, columnHeader11, columnHeader12 });
             listViewUsers.FullRowSelect = true;
             listViewUsers.GridLines = true;
-            listViewUsers.Location = new Point(12, 75);
+            listViewUsers.Location = new Point(12, 121);
             listViewUsers.Name = "listViewUsers";
             listViewUsers.Size = new Size(183, 378);
             listViewUsers.TabIndex = 6;
@@ -192,13 +193,23 @@
             // 
             // btnUserDelete
             // 
-            btnUserDelete.Location = new Point(12, 37);
+            btnUserDelete.Location = new Point(41, 71);
             btnUserDelete.Name = "btnUserDelete";
             btnUserDelete.Size = new Size(118, 23);
             btnUserDelete.TabIndex = 7;
             btnUserDelete.Text = "odebrat uživatele";
             btnUserDelete.UseVisualStyleBackColor = true;
             btnUserDelete.Click += btnUserDelete_Click;
+            // 
+            // btnAddUser
+            // 
+            btnAddUser.Location = new Point(12, 96);
+            btnAddUser.Name = "btnAddUser";
+            btnAddUser.Size = new Size(183, 23);
+            btnAddUser.TabIndex = 8;
+            btnAddUser.Text = "přidání/upravení uživatele";
+            btnAddUser.UseVisualStyleBackColor = true;
+            btnAddUser.Click += btnAddUser_Click;
             // 
             // formAdmin
             // 
@@ -207,6 +218,7 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1563, 977);
+            Controls.Add(btnAddUser);
             Controls.Add(btnUserDelete);
             Controls.Add(listViewUsers);
             Controls.Add(button1);
@@ -246,5 +258,6 @@
         private ColumnHeader columnHeader11;
         private ColumnHeader columnHeader12;
         private Button btnUserDelete;
+        private Button btnAddUser;
     }
 }

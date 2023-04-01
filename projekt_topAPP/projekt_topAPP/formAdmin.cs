@@ -112,7 +112,7 @@ namespace projekt_topAPP
 
         private void btnUserDelete_Click(object sender, EventArgs e)
         {
-            if(listViewUsers.SelectedIndices.Count > 0)
+            if (listViewUsers.SelectedIndices.Count > 0)
             {
                 var ID = listViewUsers.Items[listViewUsers.SelectedIndices[0]].SubItems[0].Text;
                 SqlRepository.DeleteUser(ID);
@@ -123,6 +123,12 @@ namespace projekt_topAPP
             {
                 MessageBox.Show("vyber položku");
             }
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            formAddUser formAddUser = new formAddUser();
+            formAddUser.ShowDialog();
         }
     }
 }
