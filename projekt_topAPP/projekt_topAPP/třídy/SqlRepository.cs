@@ -183,5 +183,22 @@ namespace projekt_topAPP
                 connection.Close();
             }
         }
+        public static void AddContract(projekt_topAPP.třídy.Contract contract)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = $"insert into Contract (Customer,Description) VALUES (@CustomerValue,@DescriptionValue)";
+
+                    command.Parameters.AddWithValue("@CustomerValue", contract.Customer);
+                    command.Parameters.AddWithValue("@DescriptionValue", contract.Description);
+                     
+                    command.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+        }
     }
 }

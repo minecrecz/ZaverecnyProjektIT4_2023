@@ -16,6 +16,12 @@ namespace projekt_topAPP.třídy
             Customer = customer;
             Description = description;
         }
+        public Contract( string customer, string description)
+        {
+           
+            Customer = customer;
+            Description = description;
+        }
 
         public int ContractNumber{ get; set; }
         public string Customer { get; set; }
