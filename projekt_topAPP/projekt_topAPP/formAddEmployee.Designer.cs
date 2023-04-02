@@ -157,6 +157,7 @@
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "formAddEmployee";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Přidání zaměstnance";
             ResumeLayout(false);
             PerformLayout();

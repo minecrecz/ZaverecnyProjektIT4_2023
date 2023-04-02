@@ -95,6 +95,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "formAddContract";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Přidání zakázky";
             ResumeLayout(false);
             PerformLayout();

@@ -190,6 +190,7 @@
             Controls.Add(listViewContract);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "formUser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Uživatel";
             Load += formUser_Load;
             ResumeLayout(false);

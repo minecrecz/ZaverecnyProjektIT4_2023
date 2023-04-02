@@ -137,6 +137,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "formAddHours";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "přidání odpracovaných hodin";
             ((System.ComponentModel.ISupportInitialize)txtWorkHours).EndInit();
             ResumeLayout(false);

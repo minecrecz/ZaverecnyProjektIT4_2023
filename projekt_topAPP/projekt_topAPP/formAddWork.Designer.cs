@@ -95,6 +95,7 @@
             Controls.Add(txtWorkName);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "formAddWork";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Přidání práce";
             ResumeLayout(false);
             PerformLayout();
