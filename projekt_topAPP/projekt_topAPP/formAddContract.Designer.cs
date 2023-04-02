@@ -38,24 +38,26 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(77, 56);
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(61, 51);
             label1.Name = "label1";
-            label1.Size = new Size(84, 15);
+            label1.Size = new Size(116, 21);
             label1.TabIndex = 0;
-            label1.Text = "jméno zakázky";
+            label1.Text = "Jméno zakázky";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(77, 153);
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(61, 146);
             label2.Name = "label2";
-            label2.Size = new Size(79, 15);
+            label2.Size = new Size(107, 21);
             label2.TabIndex = 1;
-            label2.Text = "popis zakázky";
+            label2.Text = "Popis zakázky";
             // 
             // txtAddConctractName
             // 
-            txtAddConctractName.Location = new Point(36, 90);
+            txtAddConctractName.Location = new Point(40, 84);
             txtAddConctractName.Name = "txtAddConctractName";
             txtAddConctractName.Size = new Size(156, 23);
             txtAddConctractName.TabIndex = 2;
@@ -70,26 +72,30 @@
             // 
             // btnAddContract
             // 
+            btnAddContract.BackColor = Color.OrangeRed;
+            btnAddContract.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAddContract.Location = new Point(77, 314);
             btnAddContract.Name = "btnAddContract";
-            btnAddContract.Size = new Size(75, 23);
+            btnAddContract.Size = new Size(82, 40);
             btnAddContract.TabIndex = 4;
-            btnAddContract.Text = "přidat";
-            btnAddContract.UseVisualStyleBackColor = true;
+            btnAddContract.Text = "Přidat";
+            btnAddContract.UseVisualStyleBackColor = false;
             btnAddContract.Click += btnAddContract_Click;
             // 
             // formAddContract
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(238, 381);
             Controls.Add(btnAddContract);
             Controls.Add(txtAddDescription);
             Controls.Add(txtAddConctractName);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "formAddContract";
-            Text = "AddContact";
+            Text = "Přidání zakázky";
             ResumeLayout(false);
             PerformLayout();
         }

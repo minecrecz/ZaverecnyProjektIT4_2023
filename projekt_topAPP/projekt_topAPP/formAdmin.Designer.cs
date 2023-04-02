@@ -68,6 +68,8 @@
             columnHeader20 = new ColumnHeader();
             button3 = new Button();
             button4 = new Button();
+            label6 = new Label();
+            label7 = new Label();
             SuspendLayout();
             // 
             // listViewEmployee
@@ -76,7 +78,7 @@
             listViewEmployee.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             listViewEmployee.FullRowSelect = true;
             listViewEmployee.GridLines = true;
-            listViewEmployee.Location = new Point(12, 586);
+            listViewEmployee.Location = new Point(12, 628);
             listViewEmployee.MultiSelect = false;
             listViewEmployee.Name = "listViewEmployee";
             listViewEmployee.Size = new Size(506, 379);
@@ -114,24 +116,26 @@
             // 
             // btnEmployeeDelete
             // 
+            btnEmployeeDelete.BackColor = Color.OrangeRed;
             btnEmployeeDelete.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEmployeeDelete.Location = new Point(12, 557);
+            btnEmployeeDelete.Location = new Point(12, 599);
             btnEmployeeDelete.Name = "btnEmployeeDelete";
             btnEmployeeDelete.Size = new Size(134, 23);
             btnEmployeeDelete.TabIndex = 1;
             btnEmployeeDelete.Text = "Mazání zaměstnance";
-            btnEmployeeDelete.UseVisualStyleBackColor = true;
+            btnEmployeeDelete.UseVisualStyleBackColor = false;
             btnEmployeeDelete.Click += btnEmployeeDelete_Click;
             // 
             // btnAddEmployeeForm
             // 
+            btnAddEmployeeForm.BackColor = Color.OrangeRed;
             btnAddEmployeeForm.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAddEmployeeForm.Location = new Point(314, 557);
+            btnAddEmployeeForm.Location = new Point(314, 599);
             btnAddEmployeeForm.Name = "btnAddEmployeeForm";
             btnAddEmployeeForm.Size = new Size(204, 23);
             btnAddEmployeeForm.TabIndex = 2;
             btnAddEmployeeForm.Text = "Přídání zaměstnanců";
-            btnAddEmployeeForm.UseVisualStyleBackColor = true;
+            btnAddEmployeeForm.UseVisualStyleBackColor = false;
             btnAddEmployeeForm.Click += btnAddEmployeeForm_Click;
             // 
             // listViewContract
@@ -140,7 +144,7 @@
             listViewContract.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9 });
             listViewContract.FullRowSelect = true;
             listViewContract.GridLines = true;
-            listViewContract.Location = new Point(574, 587);
+            listViewContract.Location = new Point(574, 628);
             listViewContract.MultiSelect = false;
             listViewContract.Name = "listViewContract";
             listViewContract.Size = new Size(386, 378);
@@ -166,26 +170,28 @@
             // 
             // btnDeleteContract
             // 
+            btnDeleteContract.BackColor = Color.OrangeRed;
             btnDeleteContract.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDeleteContract.Location = new Point(574, 557);
+            btnDeleteContract.Location = new Point(574, 599);
             btnDeleteContract.Name = "btnDeleteContract";
             btnDeleteContract.Size = new Size(114, 23);
             btnDeleteContract.TabIndex = 4;
             btnDeleteContract.Text = "Mazání zakázek";
-            btnDeleteContract.UseVisualStyleBackColor = true;
+            btnDeleteContract.UseVisualStyleBackColor = false;
             btnDeleteContract.Click += btnDeleteContract_Click;
             // 
             // button1
             // 
+            button1.BackColor = Color.OrangeRed;
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(806, 558);
+            button1.Location = new Point(806, 599);
             button1.Name = "button1";
             button1.Size = new Size(154, 23);
             button1.TabIndex = 5;
             button1.Text = "Přidání zakázek";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // listViewUsers
@@ -193,7 +199,7 @@
             listViewUsers.Columns.AddRange(new ColumnHeader[] { columnHeader10, columnHeader11, columnHeader12 });
             listViewUsers.FullRowSelect = true;
             listViewUsers.GridLines = true;
-            listViewUsers.Location = new Point(12, 121);
+            listViewUsers.Location = new Point(12, 150);
             listViewUsers.MultiSelect = false;
             listViewUsers.Name = "listViewUsers";
             listViewUsers.Size = new Size(183, 378);
@@ -215,22 +221,26 @@
             // 
             // btnUserDelete
             // 
-            btnUserDelete.Location = new Point(41, 71);
+            btnUserDelete.BackColor = Color.OrangeRed;
+            btnUserDelete.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnUserDelete.Location = new Point(38, 93);
             btnUserDelete.Name = "btnUserDelete";
             btnUserDelete.Size = new Size(118, 23);
             btnUserDelete.TabIndex = 7;
             btnUserDelete.Text = "odebrat uživatele";
-            btnUserDelete.UseVisualStyleBackColor = true;
+            btnUserDelete.UseVisualStyleBackColor = false;
             btnUserDelete.Click += btnUserDelete_Click;
             // 
             // btnAddUser
             // 
-            btnAddUser.Location = new Point(12, 96);
+            btnAddUser.BackColor = Color.OrangeRed;
+            btnAddUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddUser.Location = new Point(12, 121);
             btnAddUser.Name = "btnAddUser";
             btnAddUser.Size = new Size(183, 23);
             btnAddUser.TabIndex = 8;
             btnAddUser.Text = "přidání uživatele";
-            btnAddUser.UseVisualStyleBackColor = true;
+            btnAddUser.UseVisualStyleBackColor = false;
             btnAddUser.Click += btnAddUser_Click;
             // 
             // listViewWork
@@ -238,7 +248,7 @@
             listViewWork.Columns.AddRange(new ColumnHeader[] { columnHeader13, columnHeader14, columnHeader15 });
             listViewWork.FullRowSelect = true;
             listViewWork.GridLines = true;
-            listViewWork.Location = new Point(248, 125);
+            listViewWork.Location = new Point(248, 154);
             listViewWork.MultiSelect = false;
             listViewWork.Name = "listViewWork";
             listViewWork.Size = new Size(270, 374);
@@ -262,29 +272,33 @@
             // 
             // button2
             // 
-            button2.Location = new Point(248, 99);
+            button2.BackColor = Color.OrangeRed;
+            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(248, 125);
             button2.Name = "button2";
             button2.Size = new Size(112, 23);
             button2.TabIndex = 10;
             button2.Text = "mazání práce";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // btnAddWork
             // 
-            btnAddWork.Location = new Point(378, 99);
+            btnAddWork.BackColor = Color.OrangeRed;
+            btnAddWork.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddWork.Location = new Point(378, 125);
             btnAddWork.Name = "btnAddWork";
             btnAddWork.Size = new Size(140, 23);
             btnAddWork.TabIndex = 11;
             btnAddWork.Text = "přidání práce";
-            btnAddWork.UseVisualStyleBackColor = true;
+            btnAddWork.UseVisualStyleBackColor = false;
             btnAddWork.Click += btnAddWork_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(57, 22);
+            label1.Location = new Point(49, 50);
             label1.Name = "label1";
             label1.Size = new Size(97, 30);
             label1.TabIndex = 12;
@@ -294,7 +308,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(344, 22);
+            label2.Location = new Point(334, 74);
             label2.Name = "label2";
             label2.Size = new Size(64, 30);
             label2.TabIndex = 13;
@@ -304,7 +318,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(168, 531);
+            label3.Location = new Point(168, 558);
             label3.Name = "label3";
             label3.Size = new Size(131, 30);
             label3.TabIndex = 14;
@@ -314,7 +328,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(713, 531);
+            label4.Location = new Point(709, 558);
             label4.Name = "label4";
             label4.Size = new Size(87, 30);
             label4.TabIndex = 15;
@@ -324,7 +338,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(683, 22);
+            label5.Location = new Point(684, 85);
             label5.Name = "label5";
             label5.Size = new Size(161, 30);
             label5.TabIndex = 16;
@@ -335,7 +349,7 @@
             listViewHours.Columns.AddRange(new ColumnHeader[] { columnHeader16, columnHeader17, columnHeader18, columnHeader19, columnHeader20 });
             listViewHours.FullRowSelect = true;
             listViewHours.GridLines = true;
-            listViewHours.Location = new Point(574, 125);
+            listViewHours.Location = new Point(574, 154);
             listViewHours.Name = "listViewHours";
             listViewHours.Size = new Size(386, 374);
             listViewHours.TabIndex = 17;
@@ -368,31 +382,56 @@
             // 
             // button3
             // 
-            button3.Location = new Point(574, 96);
+            button3.BackColor = Color.OrangeRed;
+            button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(574, 125);
             button3.Name = "button3";
             button3.Size = new Size(153, 23);
             button3.TabIndex = 18;
             button3.Text = "mazání pracovní hodiny";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button4
             // 
-            button4.Location = new Point(806, 96);
+            button4.BackColor = Color.OrangeRed;
+            button4.Location = new Point(806, 125);
             button4.Name = "button4";
             button4.Size = new Size(154, 23);
             button4.TabIndex = 19;
             button4.Text = "přidání pracovní hodiny";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.OrangeRed;
+            label6.Location = new Point(432, 9);
+            label6.Name = "label6";
+            label6.Size = new Size(139, 46);
+            label6.TabIndex = 20;
+            label6.Text = "TopAPP";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(452, 55);
+            label7.Name = "label7";
+            label7.Size = new Size(90, 15);
+            label7.TabIndex = 21;
+            label7.Text = "Admin terminal";
             // 
             // formAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(982, 977);
+            BackColor = SystemColors.ActiveBorder;
+            ClientSize = new Size(982, 1019);
+            Controls.Add(label7);
+            Controls.Add(label6);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(listViewHours);
@@ -413,11 +452,11 @@
             Controls.Add(btnAddEmployeeForm);
             Controls.Add(btnEmployeeDelete);
             Controls.Add(listViewEmployee);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "formAdmin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "formAdmin";
+            Text = "Admin";
             Load += formAdmin_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -465,5 +504,7 @@
         private ColumnHeader columnHeader20;
         private Button button3;
         private Button button4;
+        private Label label6;
+        private Label label7;
     }
 }

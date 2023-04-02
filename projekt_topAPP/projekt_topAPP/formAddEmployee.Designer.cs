@@ -36,122 +36,117 @@
             txtForeName = new TextBox();
             txtEmail = new TextBox();
             txtNumber = new TextBox();
-            txtBirthDay = new TextBox();
             label6 = new Label();
-            label7 = new Label();
             button1 = new Button();
+            dateBirthDay = new DateTimePicker();
             SuspendLayout();
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(86, 37);
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(117, 46);
             label2.Name = "label2";
-            label2.Size = new Size(42, 15);
+            label2.Size = new Size(58, 21);
             label2.TabIndex = 1;
             label2.Text = "Jméno";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(204, 37);
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(111, 125);
             label3.Name = "label3";
-            label3.Size = new Size(51, 15);
+            label3.Size = new Size(69, 21);
             label3.TabIndex = 2;
             label3.Text = "Přijmení";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(343, 37);
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(117, 211);
             label4.Name = "label4";
-            label4.Size = new Size(36, 15);
+            label4.Size = new Size(48, 21);
             label4.TabIndex = 3;
             label4.Text = "Email";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(495, 37);
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(96, 275);
             label5.Name = "label5";
-            label5.Size = new Size(75, 15);
+            label5.Size = new Size(105, 21);
             label5.TabIndex = 4;
             label5.Text = "Telefoní číslo";
             // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(54, 74);
+            txtFirstName.Location = new Point(44, 79);
             txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(111, 23);
+            txtFirstName.Size = new Size(200, 23);
             txtFirstName.TabIndex = 6;
             // 
             // txtForeName
             // 
-            txtForeName.Location = new Point(190, 74);
+            txtForeName.Location = new Point(44, 163);
             txtForeName.Name = "txtForeName";
-            txtForeName.Size = new Size(102, 23);
+            txtForeName.Size = new Size(200, 23);
             txtForeName.TabIndex = 7;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(309, 74);
+            txtEmail.Location = new Point(44, 235);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(146, 23);
+            txtEmail.Size = new Size(200, 23);
             txtEmail.TabIndex = 8;
             // 
             // txtNumber
             // 
-            txtNumber.Location = new Point(476, 74);
+            txtNumber.Location = new Point(44, 299);
             txtNumber.Name = "txtNumber";
-            txtNumber.Size = new Size(154, 23);
+            txtNumber.Size = new Size(200, 23);
             txtNumber.TabIndex = 9;
-            // 
-            // txtBirthDay
-            // 
-            txtBirthDay.Location = new Point(645, 74);
-            txtBirthDay.Name = "txtBirthDay";
-            txtBirthDay.Size = new Size(108, 23);
-            txtBirthDay.TabIndex = 10;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.FlatStyle = FlatStyle.Flat;
-            label6.Location = new Point(645, 37);
+            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(90, 331);
             label6.Name = "label6";
-            label6.Size = new Size(91, 15);
+            label6.Size = new Size(124, 21);
             label6.TabIndex = 11;
             label6.Text = "Datum narození";
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(655, 58);
-            label7.Name = "label7";
-            label7.Size = new Size(85, 13);
-            label7.TabIndex = 12;
-            label7.Text = "(DD/MM/RRRR)";
-            // 
             // button1
             // 
-            button1.Location = new Point(322, 131);
+            button1.BackColor = Color.OrangeRed;
+            button1.Location = new Point(90, 422);
             button1.Name = "button1";
-            button1.Size = new Size(144, 37);
+            button1.Size = new Size(124, 37);
             button1.TabIndex = 13;
             button1.Text = "Přidat";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
+            // 
+            // dateBirthDay
+            // 
+            dateBirthDay.Location = new Point(44, 355);
+            dateBirthDay.Name = "dateBirthDay";
+            dateBirthDay.Size = new Size(200, 23);
+            dateBirthDay.TabIndex = 14;
             // 
             // formAddEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 180);
+            BackColor = SystemColors.ActiveBorder;
+            ClientSize = new Size(285, 493);
+            Controls.Add(dateBirthDay);
             Controls.Add(button1);
-            Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(txtBirthDay);
             Controls.Add(txtNumber);
             Controls.Add(txtEmail);
             Controls.Add(txtForeName);
@@ -160,6 +155,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "formAddEmployee";
             Text = "Přidání zaměstnance";
             ResumeLayout(false);
@@ -175,9 +171,8 @@
         private TextBox txtForeName;
         private TextBox txtEmail;
         private TextBox txtNumber;
-        private TextBox txtBirthDay;
         private Label label6;
-        private Label label7;
         private Button button1;
+        private DateTimePicker dateBirthDay;
     }
 }

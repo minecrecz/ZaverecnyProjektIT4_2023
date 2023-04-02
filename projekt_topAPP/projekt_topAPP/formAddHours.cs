@@ -23,9 +23,9 @@ namespace projekt_topAPP
         {
             if (IDWorkHours == -1)
             {
-                SqlRepository.AddHours(new Hours(txtEmployeeName.Text, txtContractName.Text, txtWorkType.Text,txtWorkHours.Text));
+                SqlRepository.AddHours(new Hours(txtEmployeeName.Text, txtContractName.Text, txtWorkType.Text, txtWorkHours.Value.ToString()));
                 MessageBox.Show("uživatel přídán do databáze");
-                
+
             }
         }
     }
