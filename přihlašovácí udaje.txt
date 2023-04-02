@@ -1,0 +1,2 @@
+Přihlašovací údaje pro admina jsou: admin admin
+Přihlašovací údaje pro uživatele jsou: user user
